@@ -8,7 +8,8 @@ import numpy as np
 import astropy.io.fits as pf
 
 
-def prepare_highres_source(ra_source, dec_source, galaxy_name='NGC1309', magnitude=None, amp=1.2e3):
+def prepare_highres_source(ra_source, dec_source, galaxy_name='NGC1309', 
+                           magnitude=None, amp=1.2e3):
     source_dir = os.path.join('data', 'sources_TDLMC')
     source_filename = '{}_fix.fits'.format(galaxy_name)
      # load a source galaxy pre-generated with galsim
@@ -18,7 +19,7 @@ def prepare_highres_source(ra_source, dec_source, galaxy_name='NGC1309', magnitu
     source_image[source_image < 0] = 0.
     # normalize so max is 1 (arbirary flux units)
     source_image /= source_image.max()
-    # specify scale, centering and rotation angle for interpolation on source grid
+    # specify scale, to target half-light radius  # TODO!
     galaxy_scale = 1e-2   # effectively set the angular size
     # light profile in lenstronomy conventions
     source_model_list = ['INTERPOL']
@@ -30,7 +31,7 @@ def prepare_highres_source(ra_source, dec_source, galaxy_name='NGC1309', magnitu
         kwargs_interpol_source['amp'] = amp
     kwargs_source = [kwargs_interpol_source]
     return source_model_list, kwargs_source
-    
+
 
 def prepare_highres_source_multiple(source_pos_list, galaxy_name_list, mag_list=None, amp_list=None):
     if mag_list is None:

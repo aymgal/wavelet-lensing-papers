@@ -1,3 +1,9 @@
+# specific to this project
+paper_I/_mass_mock_substructure
+paper_I/_mass_SLACS
+**/*.ai
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
