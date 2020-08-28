@@ -1,8 +1,11 @@
 # specific to this project
-paper_I/_mass_mock_substructure
-paper_I/_mass_SLACS
-**/*.ai
 
+# too heavy backup files for GitHub...
+paper_I/backups/backup-src-recon_data-ELT*
+paper_I/figures/
+
+# illustrator files
+*.ai
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
