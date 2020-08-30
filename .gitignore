@@ -1,8 +1,13 @@
+#####
 # specific to this project
+
+WIPs
 
 # too heavy backup files for GitHub...
 paper_I/backups/backup-src-recon_data-ELT*
 paper_I/figures/
+
+#####
 
 # illustrator files
 *.ai
