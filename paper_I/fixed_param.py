@@ -47,6 +47,14 @@ galaxy_name_list = ['NGC3982', 'ESO498G5', 'NGC3259']
 
 
 ##### INSTRUMENT SETTINGS #####
+
+#**HST data**
+#Instrument and observational setting inspired by J1537-3010 F160W science frame (after drizzling) and the WFC3/IR Exposure Time Calculator, for 4x500s exposures before drizzling.
+
+
+#**E-ELT data**
+#Instrument and observational setting inspired by Meng, Treu et al. 2015 (but those were for another very large telescope, the TMT) and Deep et al. 2011 (gives some limiting mag at a given exposure time), and the ELT Exposure Time Calculator for H band on the MICADO instrument (http://www.eso.org/observing/etc/bin/gen/form?INS.NAME=ELT+INS.MODE=swimaging).
+
 def get_simulation_kwargs(instrument_type, psf_type, psf_kernel):
     if instrument_type == 'HST':
         # HST WCF3 F160W band
