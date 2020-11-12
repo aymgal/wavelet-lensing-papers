@@ -10,7 +10,8 @@ import astropy.io.fits as pf
 
 def prepare_highres_source(ra_source, dec_source, galaxy_name='NGC1309', 
                            magnitude=None, amp=1.2e3):
-    source_dir = os.path.join('data', 'sources_TDLMC')
+    this_dir = os.path.dirname(os.path.realpath(__file__))
+    source_dir = os.path.join(this_dir, 'data', 'sources_TDLMC')
     source_filename = '{}_fix.fits'.format(galaxy_name)
      # load a source galaxy pre-generated with galsim
     with pf.open(os.path.join(source_dir, source_filename)) as f:

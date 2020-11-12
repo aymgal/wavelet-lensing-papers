@@ -19,7 +19,8 @@ def resize_psf_kernel(kernel, new_size, replace_negative=1e-15):
 
 def get_HST_psf_kernel():
     """using tiny time kernel"""
-    with pf.open(os.path.join('data', 'PSFs', 'PSF_HST_F160W_tinytim.fits')) as f:
+    this_dir = os.path.dirname(os.path.realpath(__file__))
+    with pf.open(os.path.join(this_dir, 'data', 'PSFs', 'PSF_HST_F160W_tinytim.fits')) as f:
         psf_kernel = f[0].data
     # remove pixels near edges that display artifacts
     psf_kernel = psf_kernel[8:-8, 8:-8]
@@ -29,7 +30,8 @@ def get_HST_psf_kernel():
 
 def get_ELT_psf_kernel(size_kernel=159):
     """using SimCADO file to get E-ELT simulated PSF for the MICADO instrument (from MAORY simulation)"""
-    with pf.open(os.path.join('data', 'PSFs', 'PSF_MCAO_H_Strehl21.fits')) as f:
+    this_dir = os.path.dirname(os.path.realpath(__file__))
+    with pf.open(os.path.join(this_dir, 'data', 'PSFs', 'PSF_MCAO_H_Strehl21.fits')) as f:
         psf_kernel_maory_raw = f[0].data.astype(np.float32)
     psf_kernel_maory_odd = psf_kernel_maory_raw[1:, 1:]
     psf_kernel_maory_odd /= psf_kernel_maory_odd.sum()  # normalize so sum is 1
