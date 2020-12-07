@@ -1,17 +1,16 @@
 #####
 # specific to this project
-
+paper_I/mass_sampling/tests
+paper_I/mass_sampling/cluster
+paper_I/big_linear_inversion
 WIPs
-
-# too heavy backup files for GitHub...
-paper_I/backups/backup-src-recon_data-ELT*
-paper_I/figures/
-paper_I/schemes/*pdf
-
-#####
-
-# illustrator files
 *.ai
+# too big files to store on GitHub:
+paper_I/backups/backup-src-recon_data-ELT*
+paper_I/figures/*pdf
+paper_I/schemes/*pdf
+paper_I/mass_sampling/results*
+#####
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
