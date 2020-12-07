@@ -3,6 +3,8 @@ __author__ = 'aymgal'
 import numpy as np
 from lenstronomy.Util.param_util import phi_q2_ellipticity
 
+from lenstronomy.Util.image_util import re_size
+
 # here we set the global parameters used for the simulation of mock data (HST and E-ELT)
 
 
@@ -56,6 +58,7 @@ galaxy_name_list = ['NGC3982', 'ESO498G5', 'NGC3259']
 #Instrument and observational setting inspired by Meng, Treu et al. 2015 (but those were for another very large telescope, the TMT) and Deep et al. 2011 (gives some limiting mag at a given exposure time), and the ELT Exposure Time Calculator for H band on the MICADO instrument (http://www.eso.org/observing/etc/bin/gen/form?INS.NAME=ELT+INS.MODE=swimaging).
 
 def get_simulation_kwargs(instrument_type, psf_type, psf_kernel):
+
     if instrument_type == 'HST':
         # HST WCF3 F160W band
         kwargs_simulation = {
@@ -69,7 +72,7 @@ def get_simulation_kwargs(instrument_type, psf_type, psf_kernel):
             'exposure_time': 500,  # exposure time per image (in seconds)
             'magnitude_zero_point': 28,  # magnitude in which 1 count per second per arcsecond square is registered (in ADU's)
             'num_exposures': 4,  # number of exposures that are combined
-            'data_count_unit': 'e-',  # 'ADU' or 'e-'. It was 'ADU' before some lenstronomy changes around july 2020
+            'data_count_unit': 'e-',  # 'ADU' or 'e-'
 
             # or instead of 'read_noise' + 'sky_brightness'
             'background_noise': 0.05,  # in units of data_count_unit
@@ -89,10 +92,10 @@ def get_simulation_kwargs(instrument_type, psf_type, psf_kernel):
 
             # observation-related
             'sky_brightness': 25,  # sky brightness (in magnitude per square arcseconds), depends on exposure time
-            'exposure_time': 1200,  # exposure time per image (in seconds)
+            'exposure_time': 1200, #1200,  # exposure time per image (in seconds)
             'magnitude_zero_point': 34,  # magnitude in which 1 count per second per arcsecond square is registered (in ADU's)
             'num_exposures': 1,  # number of exposures that are combined
-            'data_count_unit': 'e-',  # 'ADU' or 'e-'. It was 'ADU' before some lenstronomy changes around july 2020
+            'data_count_unit': 'ADU',
 
             # or instead of 'read_noise' + 'sky_brightness'
             #'background_noise': 0.04,

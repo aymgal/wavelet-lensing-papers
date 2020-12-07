@@ -1,4 +1,4 @@
-# SLITronomy works
+# Resources for SLITronomy papers
 
 This repository gathers notebooks and resources ussed to generate figures of SLITronomy-related papers.
 

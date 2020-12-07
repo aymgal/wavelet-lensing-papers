@@ -36,5 +36,6 @@ def get_ELT_psf_kernel(size_kernel=159):
     psf_kernel_maory_odd = psf_kernel_maory_raw[1:, 1:]
     psf_kernel_maory_odd /= psf_kernel_maory_odd.sum()  # normalize so sum is 1
     # resize the PSF to smaller kernel
-    psf_kernel = resize_psf_kernel(psf_kernel_maory_odd, size_kernel)
+    if size_kernel < psf_kernel_maory_odd.shape[0]:
+        psf_kernel = resize_psf_kernel(psf_kernel_maory_odd, size_kernel)
     return psf_kernel.astype(float)
