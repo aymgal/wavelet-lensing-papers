@@ -1,21 +1,15 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Complex source reconstruction at fixed lens mass
+# Complex source reconstruction and lens model inference
 # 
 # __Author__ : Aymeric Galan
 # 
 # __Created__ : 23/04/20
 # 
-# __Updated__ : 31/08/20
+# __Updated__ : 7/12/20
 # 
-# This notebooks gives a working example of the modelling of a complex and realistic source with a pixel-based method based on sparsity and wavelets. The lens mass model is assumed to be exactly known, or at least a good approximation of it.
-# 
-# The source object, when modelled using the pixel-based method, is reconstructed iteratively on a grid of pixels, subject to constraints of __sparsity in starlet space__ and __positivity in direct space__.
-
-
-# 2/11/20 : Modified form sampling the mass parameters through MCMC. 
-
+# This script gives a working example sampling lens model parameters (through MCMC) while reconstructing the source using starlets. This uses `lenstronomy` with the SLITronomy solver.
 
 __author__ = 'aymgal'
 
@@ -411,7 +405,7 @@ def run_pixelbased_sampling(class_list, kwargs_lens, ss_factor_source,
         'supersampling_factor_source': ss_factor_source,
         'minimal_source_plane': True,
         'min_threshold': 3,
-        'threshold_increment_high_freq': 1,
+        'threshold_increment_high_freq': 2,
         'threshold_decrease_type': 'exponential',
         'num_iter_source': 20,
         'num_iter_weights': 2,  # 3
