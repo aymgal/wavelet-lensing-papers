@@ -1,10 +1,12 @@
-# Resources for SLITronomy papers
+# Resources for works based on [SLITronomy](https://github.com/aymgal/SLITronomy)
 
 This repository gathers notebooks and resources ussed to generate figures of SLITronomy-related papers.
 
 ## Paper I
 
-_link to come_
+*__SLITronomy: Towards a fully wavelet-based strong lensing inversion technique__*; [Galan et al. 2020](https://ui.adsabs.harvard.edu/abs/2020arXiv201202802G/abstract)
+
+Introduction of an optimised implementation of the SLIT algorithms, easily accessible through the [lenstronomy](https://github.com/sibirrer/lenstronomy) package, application to mock and real HST data, anticipation on future E-ELT image requirements.
 
 ### Reconstruction of source galaxies from the SLACS sample
 
@@ -17,3 +19,9 @@ Source reconstruction for the system SDSSJ1250+0523, assuming lens model of [Sha
 Source reconstruction for mock E-ELT data, assuming known lens model.
 
 ![ELT source reconstruction](paper_I/figures/data-ELT_mocksource-highres-single_zoom.png "ELT source reconstruction")
+
+### Support of analytical lens model inference
+
+Joint source reconstruction and lens model posterior inference from mock HST data. The posterior sampling is performed through MCMC capabilities of lenstronomy, and marginalised over choices of the source pixel size.
+
+<center><img src="paper_I/figures/data-HST_mocksource-highres-single_mass_sampling_offset-True.png" alt="lens model posteriors" width="600"/></center>
