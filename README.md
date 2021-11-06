@@ -1,4 +1,5 @@
-# Complex lens modeling with Wavelets: [SLITronomy](https://github.com/aymgal/SLITronomy), [Herculens](https://github.com/austinpeel/herculens)
+# Complex lens modeling with Wavelets:
+# [SLITronomy](https://github.com/aymgal/SLITronomy) and [Herculens](https://github.com/austinpeel/herculens)
 
 This repository gathers notebooks and resources used to generate figures of papers related to SLITronomy and Herculens.
 
