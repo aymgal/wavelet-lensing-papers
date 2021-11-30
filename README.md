@@ -2,9 +2,16 @@
 
 This repository gathers notebooks and resources used to generate figures of papers related to [SLITronomy](https://github.com/aymgal/SLITronomy) and [Herculens](https://github.com/austinpeel/herculens).
 
+
+## Paper II
+
+*__Modeling complex lensing potential with multiscale differentiable programming__*; Galan et al. 2022
+
+WIP. Notebooks can be found in the __paper II__ directory.
+
 ## Paper I
 
-*__SLITronomy: Towards a fully wavelet-based strong lensing inversion technique__*; [Galan et al. 2020](https://ui.adsabs.harvard.edu/abs/2020arXiv201202802G/abstract)
+*__SLITronomy: Towards a fully wavelet-based strong lensing inversion technique__*; [Galan et al. 2021](https://ui.adsabs.harvard.edu/abs/2020arXiv201202802G/abstract)
 
 Introduction of an optimised implementation of the SLIT algorithms, easily accessible through the [lenstronomy](https://github.com/sibirrer/lenstronomy) package, application to mock and real HST data, anticipation on future E-ELT image requirements.
 
