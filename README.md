@@ -1,17 +1,39 @@
-# Complex lens modeling with Wavelets
+# Flexible lens modeling with Wavelets
 
 This repository gathers notebooks and resources used to generate figures of papers related to [SLITronomy](https://github.com/aymgal/SLITronomy) and [Herculens](https://github.com/austinpeel/herculens).
 
 
 ## Paper II
 
-*__Modeling complex lensing potential with multiscale differentiable programming__*; Galan et al. 2022
+*__Using wavelets to capture deviations from smoothness in galaxy-scale strong lenses__*: Galan et al. 2022 (submitted to A&A)
 
-WIP. Notebooks can be found in the __paper II__ directory.
+
+### Multi-scale model of the lens potential
+
+We introduce a forward pixelated method to reconstruct perturbations to a smooth lens potential on a grid of pixels. The model is regularized using a multi-scale approach, based on well-motivated wavelets and sparsity constraints.
+
+We test and validate the method on three very different types of perturbations:
+
+- **localized dark subhalo** ("LS")
+- **population of substructures** along the line of sight ("PS")
+- **high-order multipoles** in the lens galaxy ("HM")
+
+<!-- <img src="paper_II/figures_readme/data_summary.jpg" width="200" alt="data set" /> -->
+
+<img src="paper_II/figures_readme/fit_summary-real-wavelet_pot_3-smooth_src-full.jpg" width="600" alt="pixelated potential results" />
+
+
+
+### Fully differentiable lens modeling with `Herculens`
+
+This works also releases a new open-source modeling software package. Called [`Herculens`](https://github.com/austinpeel/herculens), its main feature is the _exact_ computation of the gradient and higher-order derivatives of the loss function based on `JAX`. This enables robust convergence to the solution, fast estimation of parameter covariances, and improved sampling in high-dimensional parameter space.
+
+![herculens flowchart](paper_II/figures_readme/herculens_autodiff_chart.jpg "herculens flowchart")
+
 
 ## Paper I
 
-*__SLITronomy: Towards a fully wavelet-based strong lensing inversion technique__*; [Galan et al. 2021](https://ui.adsabs.harvard.edu/abs/2020arXiv201202802G/abstract)
+*__SLITronomy: Towards a fully wavelet-based strong lensing inversion technique__*: [Galan et al. 2021](https://ui.adsabs.harvard.edu/abs/2020arXiv201202802G/abstract)
 
 Introduction of an optimised implementation of the SLIT algorithms, easily accessible through the [lenstronomy](https://github.com/sibirrer/lenstronomy) package, application to mock and real HST data, anticipation on future E-ELT image requirements.
 
