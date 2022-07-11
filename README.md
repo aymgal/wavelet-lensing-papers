@@ -1,6 +1,6 @@
 # Flexible lens modeling with Wavelets
 
-This repository gathers notebooks and resources used to generate figures of papers related to [SLITronomy](https://github.com/aymgal/SLITronomy) and [Herculens](https://github.com/austinpeel/herculens).
+This repository gathers notebooks and resources to reproduce the results of [Galan et al. 2021](https://ui.adsabs.harvard.edu/abs/2020arXiv201202802G/abstract) and Galan et al. 2022.
 
 
 ## Paper II
@@ -10,7 +10,7 @@ This repository gathers notebooks and resources used to generate figures of pape
 
 ### Multi-scale model of the lens potential
 
-We introduce a forward pixelated method to reconstruct perturbations to a smooth lens potential on a grid of pixels. The model is regularized using a multi-scale approach, based on well-motivated wavelets and sparsity constraints.
+We introduce a forward pixelated method to reconstruct perturbations to a smooth lens potential on a grid of pixels. The model is regularized using a well-motivated multi-scale approach based on  wavelet transforms and sparsity constraints.
 
 We test and validate the method on three very different types of perturbations:
 
@@ -20,7 +20,7 @@ We test and validate the method on three very different types of perturbations:
 
 <!-- <img src="paper_II/figures_readme/data_summary.jpg" width="200" alt="data set" /> -->
 
-<img src="paper_II/figures_readme/fit_summary-real-wavelet_pot_3-smooth_src-full.jpg" width="600" alt="pixelated potential results" />
+<center><img src="paper_II/figures_readme/fit_summary-real-wavelet_pot_3-smooth_src-full.jpg" width="600" alt="pixelated potential results" /></center>
 
 
 
@@ -35,7 +35,7 @@ This works also releases a new open-source modeling software package. Called [`H
 
 *__SLITronomy: Towards a fully wavelet-based strong lensing inversion technique__*: [Galan et al. 2021](https://ui.adsabs.harvard.edu/abs/2020arXiv201202802G/abstract)
 
-Introduction of an optimised implementation of the SLIT algorithms, easily accessible through the [lenstronomy](https://github.com/sibirrer/lenstronomy) package, application to mock and real HST data, anticipation on future E-ELT image requirements.
+Introduction of an optimised implementation of the SLIT algorithms: [SLITronomy](https://github.com/aymgal/SLITronomy). It is easily accessible through the [lenstronomy](https://github.com/sibirrer/lenstronomy) package. We show applications on both simulated and real HST data, and anticipate the requirements of future E-ELT imaging data.
 
 ### Reconstruction of source galaxies from the SLACS sample
 
