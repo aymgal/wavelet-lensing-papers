@@ -1,0 +1,111 @@
+{
+  "cosmology": {
+    "H0": 73,
+    "Wm0": 0.3
+  },
+
+
+  "lenses": [
+
+	// Lens 1.
+	{
+    "redshift": 0.5,
+
+    "mass_model": [
+      {
+        "type": "sie",
+        "pars": {
+         "theta_E": 1.6,
+         "q": 0.731,
+         "pa": 82.534,  // -7.466 + 90
+         "x0": 0.0,
+         "y0": 0.0
+       }
+     },
+     {
+      "type": "external_shear",
+      "pars": {
+       "g": 0.032,
+       "phi": 144.217,  // 54.217 + 90
+       "x0": 0.0,
+       "y0": 0.0
+     }
+   },
+   {
+    "type": "pert",
+    "pars": {
+      "filepath": "dpsi.fits",
+      "scale_factor": 1.0,
+      "Nx": 100,
+      "Ny": 100,
+      "xmin": -4.0,
+      "xmax": 4.0,
+      "ymin": -4.0,
+      "ymax": 4.0
+    }
+  }
+],
+
+    "light_profile": {
+      "gaussian03": [
+        {
+         "type": "sersic",
+         "pars": {
+           "pa": 82.534,  // -7.466 + 90
+           "q": 0.731,
+           "M_tot": 19.0,  // CHANGED
+           "r_eff": 2.0,
+           "n": 2.0,
+           "x0": 0.0,
+           "y0": 0.0
+         }
+       }
+     ]
+    }
+
+  }
+
+],
+
+
+  "source": {
+     "redshift": 1.5,
+
+     "light_profile": {
+      "gaussian03": [
+        {
+          "type": "sersic",
+          "pars": {
+            "pa": 170.783,  // 80.783 + 90
+            "q": 0.827,
+            "M_tot": 21.0,  // CHANGED
+            "r_eff": 0.8,
+            "n": 2.0,
+            "x0": 0.4,  // 0.4 from center of cutout
+            "y0": 0.15   // 0.15 from center of cutout
+          }
+        }
+      ]
+    }
+  },
+
+
+ "instruments": [
+   {
+     "name": "gaussian03",  // instrument name (should be consistent with folder name containing the PSF)
+     "field-of-view_xmin": -4.0,  // min x coordinates (in arcsec)
+     "field-of-view_xmax": 4.0,   // max x coordinates (in arcsec)
+     "field-of-view_ymin": -4.0,  // min y coordinates (in arcsec)
+     "field-of-view_ymax": 4.0,   // max y coordinates (in arcsec)
+     "ZP": 25.9463,  // magnitude zero-point (corresponds to 1 count per second on the detector)  // CHANGED
+     "noise": {
+        "type": "PoissonNoise",
+        "texp": 9600.0,  // total exposure time  // CHANGED ~ 4 * 2400s (sim. to lensed quasars)
+        "Msb": 22.0  // sky brightness (magnitude per arcsec^2)
+      },
+      "time": [
+          1200.00, 1400.00  // ignore this, just for mocks with source variability
+      ]
+    }
+  ]
+}

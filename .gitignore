@@ -145,3 +145,7 @@ dmypy.json
 # macos cache files
 .DS_Store
 **/.DS_Store
+
+# backup / dev files
+paper_I/backups
+paper_II/backups

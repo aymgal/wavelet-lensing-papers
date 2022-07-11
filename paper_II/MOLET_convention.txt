@@ -1,0 +1,13 @@
+- if x axis is not inverted (i.e. positive to the right)
+-> convert e1 e2 to PA, then add 90 degrees and give the resulting PA to MOLET
+
+- if x is inverted (i.e. positive to the left)
+->?????
+
+
+- shear and light/lens profiles behave the same way.
+
+- MOLET convention is East-of-North
+
+
+- MOLET (VKL) gaussian is major axis, lenstro is intermediate => r_eff_molet = sigma_lenstro * np.sqrt(q)
