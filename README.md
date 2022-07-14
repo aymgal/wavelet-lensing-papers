@@ -1,11 +1,11 @@
 # Flexible lens modeling with Wavelets
 
-This repository gathers notebooks and resources to reproduce the results of [Galan et al. 2021](https://ui.adsabs.harvard.edu/abs/2020arXiv201202802G/abstract) and Galan et al. 2022.
+This repository gathers notebooks and resources to reproduce the results of [Galan et al. 2021](https://ui.adsabs.harvard.edu/abs/2020arXiv201202802G/abstract) and [Galan et al. 2022](https://ui.adsabs.harvard.edu/abs/2022arXiv220705763G/abstract).
 
 
 ## Paper II
 
-*__Using wavelets to capture deviations from smoothness in galaxy-scale strong lenses__*: Galan et al. 2022 (submitted to A&A)
+*__Using wavelets to capture deviations from smoothness in galaxy-scale strong lenses__*: [Galan et al. 2022](https://ui.adsabs.harvard.edu/abs/2022arXiv220705763G/abstract) (submitted to A&A)
 
 
 ### Multi-scale model of the lens potential
@@ -22,6 +22,7 @@ We test and validate the method on three very different types of perturbations:
 
 <center><img src="paper_II/figures_readme/fit_summary-real-wavelet_pot_3-smooth_src-full.jpg" width="600" alt="pixelated potential results" /></center>
 
+_**Note**: to run the notebooks in the [paper_II](paper_II) directory, it is advised to use the [`paper2`](https://github.com/austinpeel/herculens/tree/paper2) branch from `Herculens`._
 
 
 ### Fully differentiable lens modeling with `Herculens`
