@@ -5,7 +5,7 @@ This repository gathers notebooks and resources to reproduce the results of [Gal
 
 ## Paper II
 
-*__Using wavelets to capture deviations from smoothness in galaxy-scale strong lenses__*: [Galan et al. 2022](https://ui.adsabs.harvard.edu/abs/2022arXiv220705763G/abstract) (submitted to A&A)
+*__Using wavelets to capture deviations from smoothness in galaxy-scale strong lenses__*: [Galan et al. 2022](https://ui.adsabs.harvard.edu/abs/2022arXiv220705763G/abstract)
 
 
 ### Multi-scale model of the lens potential
